@@ -27,6 +27,7 @@ var minerlist []string = []string{
 	"ethminer",
 	"claymore",
 	"xmrig",
+	"xmrstak",
 }
 
 type ValidMiner struct {

@@ -10,6 +10,7 @@ import (
 	"bitbucket.org/minerstats/miners/ethminer"
 	"bitbucket.org/minerstats/miners/ewbf"
 	"bitbucket.org/minerstats/miners/xmrig"
+	"bitbucket.org/minerstats/miners/xmrstak"
 	"bitbucket.org/minerstats/miners/zm"
 	"bitbucket.org/minerstats/output"
 	"bitbucket.org/minerstats/sniff"
@@ -25,12 +26,13 @@ func usage() {
 usage:
 	minerstats takes no arguments
 	it can detect the following miners:
-		bminer 
+		bminer
 		ccminer
 		claymore
 		dtsm
 		ewbf
 		xmrig-nvidia
+		xmr-stak
 
 	`
 	fmt.Println(usage)
@@ -65,6 +67,10 @@ func hitMiner(miner string, port string) {
 	case "xmrig":
 		{
 			xmrig.HitXMRig(host, port, &buf)
+		}
+	case "xmrstak":
+		{
+			xmrstak.HitXMRStak(host, port, &buf)
 		}
 	default:
 		{
