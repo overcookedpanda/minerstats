@@ -8,6 +8,7 @@ import (
 	"bitbucket.org/minerstats/miners/ccminer"
 	"bitbucket.org/minerstats/miners/claymore"
 	"bitbucket.org/minerstats/miners/ethminer"
+	"bitbucket.org/minerstats/miners/enemy"
 	"bitbucket.org/minerstats/miners/ewbf"
 	"bitbucket.org/minerstats/miners/xmrig"
 	"bitbucket.org/minerstats/miners/xmrstak"
@@ -30,6 +31,7 @@ usage:
 		ccminer
 		claymore
 		dtsm
+		enemy
 		ewbf
 		xmrig-nvidia
 		xmr-stak
@@ -43,6 +45,10 @@ func hitMiner(miner string, port string) {
 	case "ccminer":
 		{
 			ccminer.HitCCMiner(host, port, &buf)
+		}
+	case "ccminer-enemy":
+		{
+			enemy.HitEnemy(host, port, &buf)
 		}
 	case "bminer":
 		{

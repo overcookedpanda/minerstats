@@ -23,6 +23,7 @@ var minerlist []string = []string{
 	"ccminer",
 	"zm",
 	"ewbf",
+	"ccminer-enemy",
 	"bminer",
 	"ethminer",
 	"claymore",
